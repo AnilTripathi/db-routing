@@ -25,7 +25,3 @@ The following environment variables need to be set for the application to run:
 git clone <repository-url>
 cd dbrouting-demo
 ```
-
-## Project Structure
-
-The project structure is as follows:
