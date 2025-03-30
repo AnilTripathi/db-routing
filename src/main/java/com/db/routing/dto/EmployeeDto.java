@@ -6,6 +6,7 @@ import java.time.OffsetDateTime;
 import java.time.ZonedDateTime;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.OptBoolean;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -32,9 +33,9 @@ public interface EmployeeDto {
         private String salary;
         private LocalDate hireDate;
         private LocalDateTime joiningDate;
-        @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
+        @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX",lenient = OptBoolean.TRUE)
         private ZonedDateTime terminatedDate;
-        @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
+        @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX",lenient = OptBoolean.TRUE)
         private OffsetDateTime offsetDateTime;
         private LocalDateTime createdDate;
         private LocalDateTime updatedDate;
